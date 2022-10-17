@@ -40,6 +40,9 @@ class Clock extends React.Component {
     // 组件挂载, 在组件已经被渲染到 DOM 中后运行
     this.timerID = setInterval(  () => this.tick(), 1000  );
   }     
+  componentDidUpdate(){
+    // 更新完毕
+  }
   componentWillUnMount(){
     // 组件销毁, 清除定时器
     clearInterval(this.timerID);
